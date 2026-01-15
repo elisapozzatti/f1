@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "f1";
+  src: url("./assets/fonts/f1-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.title {
+  background-color: #a6051a;
+  color: white;
+  font-family: f1;
+  font-weight: bolder;
+  font-size: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f1 {
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.f1:hover {
+  transform: scale(1.2);
+}
+
+.componentsContainer {
+  width: 90%;
+  height: 65vh;
+  max-height: 800px;
+  margin: 50px 0px 10px 0px;
+  border-radius: 5px;
+  background-color: #a6051a;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.componentsContainer a {
+  text-decoration: none;
+}
+
+.divLineUp {
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.divLineUp:hover {
+  transform: scale(1.2);
+}
+
+.copDrivers {
+  max-width: 200px;
+  max-height: 400px;
+}
+
+.lineup {
+  font-family: f1;
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+}
