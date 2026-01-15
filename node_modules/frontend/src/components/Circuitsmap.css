@@ -1,0 +1,14 @@
+@import url("https://unpkg.com/leaflet/dist/leaflet.css");
+
+.title {
+  height: 30%;
+}
+
+#map {
+  display: flex;
+  height: 500px;
+  width: 80%;
+  vertical-align: center;
+  margin: 10px;
+  justify-self: center;
+}
