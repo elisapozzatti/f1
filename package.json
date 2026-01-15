@@ -1,0 +1,24 @@
+{
+  "name": "f1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "dependencies": {
+    "@fullcalendar/common": "^5.11.5",
+    "@fullcalendar/core": "^6.1.19",
+    "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/react": "^6.1.19",
+    "googleapis": "^168.0.0"
+  }
+}
