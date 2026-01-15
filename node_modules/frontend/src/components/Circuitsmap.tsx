@@ -11,6 +11,7 @@ function Circuitsmap() {
     // Aggiungi layer OpenStreetMap
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution: "&copy; OpenStreetMap contributors",
+      noWrap: true,
     }).addTo(map);
 
     // Aggiungi marker
