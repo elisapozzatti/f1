@@ -7,6 +7,7 @@ const circuitSchema = new mongoose.Schema({
   length_km: Number,
   turns: Number,
   active: Boolean,
+  coords: Array,
 });
 
 export default mongoose.model("Circuit", circuitSchema);

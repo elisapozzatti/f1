@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import L from "leaflet";
 import "./Circuitsmap.css";
-import { circuits } from "./coordinates";
+import { circuits } from "./Coordinates";
 
 function Circuitsmap() {
   useEffect(() => {
