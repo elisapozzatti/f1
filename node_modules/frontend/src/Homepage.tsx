@@ -8,25 +8,25 @@ function Homepage() {
   return (
     <>
       <div className="title">
-        <p className="f1">FORMULA 1</p>
+        <p className="f1">FORMULA UNO</p>
       </div>
       <div className="componentsContainer">
         <div className="divLineUp">
           <Link to="/Lineup">
             <img src={copertinadrivers} className="copDrivers" />
-            <p className="lineup">LINE UP</p>
+            <p className="lineup">PILOTI</p>
           </Link>
         </div>
         <div className="divLineUp">
           <Link to="/Calendar">
             <img src={copertinacalendar} className="copDrivers" />
-            <p className="lineup">CALENDAR</p>
+            <p className="lineup">CALENDARIO</p>
           </Link>
         </div>
         <div className="divLineUp">
           <Link to="/Circuitsmap">
             <img src={mappa} className="copDrivers" />
-            <p className="lineup">CIRCUITS MAP</p>
+            <p className="lineup">MAPPA</p>
           </Link>
         </div>
       </div>

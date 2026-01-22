@@ -41,15 +41,15 @@ function Lineup() {
     if (!selectedTeam && !selectedWorlds && !selectedWins) {
     } else if (selectedTeam) {
       url = `http://localhost:3000/api/teams/teamdrivers?team=${encodeURIComponent(
-        selectedTeam
+        selectedTeam,
       )}`;
     } else if (selectedWorlds) {
       url = `http://localhost:3000/api/drivers/worldtitles?world_titles=${encodeURIComponent(
-        selectedWorlds
+        selectedWorlds,
       )}`;
     } else if (selectedWins) {
       url = `http://localhost:3000/api/drivers/wins?career_wins=${encodeURIComponent(
-        selectedWins
+        selectedWins,
       )}`;
     }
     fetchAllOrCurrentDrivers(url).then(setDrivers);
@@ -62,6 +62,9 @@ function Lineup() {
 
   return (
     <>
+      <div className="title">
+        <h3>PILOTI</h3>
+      </div>
       <div className="filter-container">
         <label className="checkbox">
           <input

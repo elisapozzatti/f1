@@ -90,7 +90,7 @@ function Circuitsmap() {
   return (
     <>
       <div className="title">
-        <h3>MAPPA CON TUTTI I CIRCUITI DI F1</h3>
+        <h3>MAPPA</h3>
       </div>
       <div id="map"></div>
     </>

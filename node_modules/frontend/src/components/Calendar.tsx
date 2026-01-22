@@ -18,7 +18,7 @@ function CalendarPage() {
   return (
     <>
       <div className="title">
-        <h3>CALENDARIO GRAN PREMI 1950-oggi</h3>
+        <h3>CALENDARIO</h3>
       </div>
       <div className="calendar">
         <FullCalendar
@@ -27,7 +27,7 @@ function CalendarPage() {
           events={async (_fetchInfo, successCallback, failureCallback) => {
             try {
               const res = await fetch(
-                "http://localhost:3000/api/calendar/events"
+                "http://localhost:3000/api/calendar/events",
               );
               const data = await res.json();
 
