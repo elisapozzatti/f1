@@ -1,6 +1,26 @@
 .title {
-  height: 30%;
-  margin: 10px;
+  border: 2px solid #a6051a;
+  color: #a6051a;
+  font-family: f1;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  display: flex;
+  margin: 5px;
+  border-radius: 7px;
+  position: relative;
+}
+
+.f1 {
+  margin: 0 auto;
+  transition:
+    transform 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.f1:hover {
+  transform: scale(1.2);
 }
 
 .calendar {

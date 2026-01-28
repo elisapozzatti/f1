@@ -1,15 +1,37 @@
 @import url("https://unpkg.com/leaflet/dist/leaflet.css");
 
 .title {
-  height: 30%;
-  margin: 10px;
+  border: 2px solid #a6051a;
+  color: #a6051a;
+  font-family: f1;
+  font-weight: bolder;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  display: flex;
+  margin: 5px;
+  border-radius: 7px;
+  position: relative;
+}
+
+.f1 {
+  margin: 0 auto;
+  transition:
+    transform 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.f1:hover {
+  transform: scale(1.2);
 }
 
 #map {
   display: flex;
   height: 500px;
-  width: 80%;
+  width: 60%;
   vertical-align: center;
   margin: 10px;
   justify-self: center;
+  border: 2px solid #a6051a;
+  border-radius: 7px;
 }

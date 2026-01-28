@@ -10,15 +10,17 @@
   color: #a6051a;
   font-family: f1;
   font-weight: bolder;
-  font-size: 3em;
-  display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 3em;
+  display: flex;
   margin: 5px;
   border-radius: 7px;
+  position: relative;
 }
 
 .f1 {
+  margin: 0 auto;
   transition:
     transform 0.3s ease,
     font-size 0.3s ease;
@@ -26,6 +28,66 @@
 
 .f1:hover {
   transform: scale(1.2);
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  margin-right: 5px;
+  padding: 0;
+  background: none;
+  border: none;
+  max-height: 50px;
+  max-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    transform 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.menu:hover {
+  transform: scale(1.2);
+}
+
+.iconMenu {
+  object-fit: contain;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.menuTendina {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border: 2px solid #a6051a;
+  border-radius: 7px;
+  list-style: none;
+  padding: 8px;
+  margin: 8px 0 0 0;
+  width: 15%;
+}
+
+.menuTendina a {
+  text-decoration: none;
+  color: #a6051a;
+}
+
+.voci {
+  font-size: 20px;
+  padding: 5px;
+  font-weight: lighter;
+  margin: 5px;
+  border: 2px solid #a6051a;
+  border-radius: 7px;
+  transition:
+    transform 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.voci:hover {
+  transform: scale(1.1);
 }
 
 .componentsContainer {

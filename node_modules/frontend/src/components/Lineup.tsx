@@ -1,10 +1,12 @@
 import "./Lineup.css";
 import { useEffect, useState } from "react";
 import { fetchAllOrCurrentDrivers, fetchNameTeams } from "./helper/chiamataApi";
-/* import TableLineUp from "./TableLineUp";
- */ import CardsLineUp from "./CardsLineUp";
+import CardsLineUp from "./CardsLineUp";
+import menus from "../assets/menus.png";
+import { Link } from "react-router-dom";
 
 function Lineup() {
+  const [open, setOpen] = useState(false);
   const [drivers, setDrivers] = useState([]);
   const [checked, setChecked] = useState(false);
   const [checkedAll, setCheckedAll] = useState(false);
@@ -63,7 +65,23 @@ function Lineup() {
   return (
     <>
       <div className="title">
-        <h3>PILOTI</h3>
+        <h3 className="f1">PILOTI</h3>
+        <button className="menu" onClick={() => setOpen(!open)}>
+          <img src={menus} className="iconMenu"></img>
+        </button>
+        {open && (
+          <ul className="menuTendina">
+            <Link to="/">
+              <li className="voci">Home</li>
+            </Link>
+            <Link to="/Calendar">
+              <li className="voci">Calendario</li>
+            </Link>
+            <Link to="/Circuitsmap">
+              <li className="voci">Mappa</li>
+            </Link>
+          </ul>
+        )}
       </div>
       <div className="filter-container">
         <label className="checkbox">

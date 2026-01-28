@@ -1,6 +1,9 @@
 import "./Calendar.css";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid/index.js";
+import { useState } from "react";
+import menus from "../assets/menus.png";
+import { Link } from "react-router-dom";
 
 interface GoogleCalendarEvent {
   summary: string;
@@ -15,10 +18,27 @@ interface GoogleCalendarEvent {
 }
 
 function CalendarPage() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <div className="title">
-        <h3>CALENDARIO</h3>
+        <h3 className="f1">CALENDARIO</h3>
+        <button className="menu" onClick={() => setOpen(!open)}>
+          <img src={menus} className="iconMenu"></img>
+        </button>
+        {open && (
+          <ul className="menuTendina">
+            <Link to="/">
+              <li className="voci">Home</li>
+            </Link>
+            <Link to="/Calendar">
+              <li className="voci">Piloti</li>
+            </Link>
+            <Link to="/Circuitsmap">
+              <li className="voci">Mappa</li>
+            </Link>
+          </ul>
+        )}
       </div>
       <div className="calendar">
         <FullCalendar
