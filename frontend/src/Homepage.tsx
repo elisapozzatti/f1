@@ -1,20 +1,28 @@
 import "./Homepage.css";
 import { Link } from "react-router-dom";
-import copertinadrivers from "./assets/copertina-drivers.png";
-import copertinacalendar from "./assets/copertina-calendar.png";
-import menus from "./assets/menus.png";
-import mappa from "./assets/mappa.png";
 import { useState } from "react";
 import { Cars } from "./components/props/Cars";
 
 function Homepage() {
   const [open, setOpen] = useState(false);
+
+  const modules = import.meta.glob("./assets/*.{png,jpg,webp}", {
+    eager: true,
+  }); //importa tutte le immagini in assets con chiave il path e default url come valore
+
+  const Images: Record<string, string> = Object.fromEntries(
+    Object.entries(modules).map(([path, module]: any) => {
+      const name = path.split("/").pop()!.split(".")[0]; //estrae solo il nome del file e non la stringa intera dell'url
+      return [name, module.default]; //mappa a url
+    }),
+  );
+
   return (
     <>
       <div className="title">
         <p className="f1">FORMULA UNO</p>
         <button className="menu" onClick={() => setOpen(!open)}>
-          <img src={menus} className="iconMenu"></img>
+          <img src={Images["menus"]} className="iconMenu"></img>
         </button>
         {open && (
           <ul className="menuTendina">
@@ -31,24 +39,78 @@ function Homepage() {
         )}
       </div>
       <div className="containerCars">
-        <Cars image="ferraricar" logo="ferrari" name="Ferrari"></Cars>
+        <Cars
+          image={Images["ferraricar"]}
+          logo={Images["ferrari"]}
+          name="Ferrari"
+        ></Cars>
+        <Cars
+          image={Images["mercedescar"]}
+          logo={Images["mercedes"]}
+          name="Merceds"
+        ></Cars>
+        <Cars
+          image={Images["cadillaccar"]}
+          logo={Images["cadillac"]}
+          name="Cadillac"
+        ></Cars>
+        <Cars
+          image={Images["astonmartincar"]}
+          logo={Images["astonmartin"]}
+          name="Aston Martin"
+        ></Cars>
+        <Cars
+          image={Images["audicar"]}
+          logo={Images["audi"]}
+          name="Audi"
+        ></Cars>
+        <Cars
+          image={Images["haascar"]}
+          logo={Images["haas"]}
+          name="Haas"
+        ></Cars>
+        <Cars
+          image={Images["mclarencar"]}
+          logo={Images["mclaren"]}
+          name="McLaren"
+        ></Cars>
+        <Cars
+          image={Images["racingbullscar"]}
+          logo={Images["racingbulls"]}
+          name="Racing Bulls"
+        ></Cars>
+        <Cars
+          image={Images["redbullcar"]}
+          logo={Images["redbull"]}
+          name="Red Bull"
+        ></Cars>
+        <Cars
+          image={Images["williamscar"]}
+          logo={Images["williams"]}
+          name="Williams"
+        ></Cars>
+        <Cars
+          image={Images["alpinecar"]}
+          logo={Images["alpine"]}
+          name="Alpine"
+        ></Cars>
       </div>
       <div className="componentsContainer">
         <div className="divLineUp">
           <Link to="/Lineup">
-            <img src={copertinadrivers} className="copDrivers" />
+            <img src={Images["copertina-drivers"]} className="copDrivers" />
             <p className="lineup">PILOTI</p>
           </Link>
         </div>
         <div className="divLineUp">
           <Link to="/Calendar">
-            <img src={copertinacalendar} className="copDrivers" />
+            <img src={Images["copertina-calendar"]} className="copDrivers" />
             <p className="lineup">CALENDARIO</p>
           </Link>
         </div>
         <div className="divLineUp">
           <Link to="/Circuitsmap">
-            <img src={mappa} className="copDrivers" />
+            <img src={Images["mappa"]} className="copDrivers" />
             <p className="lineup">MAPPA</p>
           </Link>
         </div>

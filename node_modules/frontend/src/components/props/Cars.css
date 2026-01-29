@@ -1,0 +1,29 @@
+.containerTeam {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.logoName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.imageCar {
+  max-width: 200px;
+  max-height: 100px;
+  margin: 0;
+  border-radius: 7px;
+}
+
+.logo {
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.name {
+  font-family: f1;
+  font-weight: lighter;
+}
